@@ -34,7 +34,8 @@ $.ajax({
 
 .done(function (result) {
   console.log(result);
-
+  $('#articles').empty();
+  
   result.response.docs.forEach(doc => {
     console.log(doc.headline.main)
     $("#articles").append(`
