@@ -18,7 +18,9 @@ url += '?' + $.param({
 $.ajax({
   url: url,
   method: 'GET',
-}).done(function (result) {
+})
+
+.done(function (result) {
   console.log(result);
 
   result.response.docs.forEach(doc => {
@@ -30,7 +32,9 @@ $.ajax({
     `)
   });
 
-}).fail(function (err) {
+})
+
+.fail(function (err) {
   throw err;
 });
 
