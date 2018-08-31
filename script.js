@@ -1,7 +1,9 @@
-var search = "fire";
-var startDate = "2017";
-var endDate = "2018";
-var page = 0;
+function seach() {
+
+var search = $("#search").val()
+var startDate = $("#sYear").val();
+var endDate = $("#eYear").val();
+var page = $("#pageNum").val();
 
 
 var url = "https://api.nytimes.com/svc/search/v2/articlesearch.json";
@@ -33,5 +35,7 @@ $.ajax({
 }).fail(function (err) {
   throw err;
 });
+
+}
 
 
