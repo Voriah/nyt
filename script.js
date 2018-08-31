@@ -1,5 +1,5 @@
 function search() {
-
+  $("#articles").empty();
 var search = $("#search").val()
 var startDate = $("#sYear").val();
 var endDate = $("#eYear").val();
