@@ -21,11 +21,12 @@ var url = "https://api.nytimes.com/svc/search/v2/articlesearch.json";
 url += '?' + $.param({
   'api-key': "0b52fcd7e3a44c78808230e9ef20205e",
   'q': search,
-  'begin_date': startDate+"0101",
-  'end_date': endDate +"1231",
+  'begin_date': startDate + "0101",
+  'end_date': endDate + "1231",
   'sort': "newest",
   'page': 0
 });
+
 $.ajax({
   url: url,
   method: 'GET',
@@ -43,7 +44,6 @@ $.ajax({
     </div>
     `)
   });
-
 
 }).fail(function (err) {
   throw err;
