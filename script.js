@@ -30,22 +30,26 @@ url += '?' + $.param({
 $.ajax({
   url: url,
   method: 'GET',
-}).done(function (result) {
+})
+
+.done(function (result) {
   console.log(result);
 
   result.response.docs.forEach(doc => {
     console.log(doc.headline.main)
     $("#articles").append(`
     <div class="articleContainer">
-    <h1 class="headlines">${doc.headline.main}</h1>
-    <h3 class="author">${doc.byline.original}</h3>
-    <h4 class="link"><a target="_blank" href="${doc.web_url}">${doc.web_url}</a></h4>
+    <h3 class="headlines">${doc.headline.main}</h3>
+    <h5 class="author">${doc.byline.original}</h5>
+    <h5 class="link"><a target="_blank" href="${doc.web_url}">${doc.web_url}</a></h5>
     <br>
     </div>
     `)
   });
 
-}).fail(function (err) {
+})
+
+.fail(function (err) {
   throw err;
 });
 
