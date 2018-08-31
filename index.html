@@ -7,22 +7,50 @@
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <title>NY Times Search</title>
 </head>
 <body>
-    <div class="jumbotron">
+    <div class="jumbotron jumbotron-fluid">
         <h1 class="display-4">NY Times Search</h1>
             <p class="lead">Find articles by date.</p>
                 <hr class="my-4">
     </div>
     <div class="container">
         <div class="row">
-
+            <h3>Let's get Searching!</h3>
         </div>
+        <div class="terms">
+                <h5>Search Term:</h5>
+                <input id="search" type="text" name="terms" value="">
+        </div>
+        <div class="numberRecords">
+                <h5>Number of Pages to Show:</h5>
+                <input id="pageNum" type="text" name="records" value="">
+        </div>
+        <div class="startYear">
+                <h5>Start Year:</h5>
+                <input id="sYear" type="text" name="start-year" value="">
+        </div>
+        <div class="endYear">
+                <h5>End Year:</h5>
+                <input id="eYear" type="text" name="end-year" value="">
+        </div>
+        <div class="btn">
+            <button type="button" onclick="search()" class="btn btn-info">Get My Articles</button>
+            <button type="button" onclick="clearResults()" class="btn btn-danger">Clear Results</button>
+        </div>
+        <div class="btn">
+            <button type="button" onclick="topStories()" class="btn btn-success">See Top Articles</button>
+        </div>
+       
     </div>
+    <div id="articles">
     
+    </div>
+
 
     <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
     <script src="script.js"></script>
+
 </body>
 </html>

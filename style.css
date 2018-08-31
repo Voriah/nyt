@@ -1,0 +1,23 @@
+.jumbotron {
+    text-align: center;
+    background-color: rgb(0, 110, 255);
+}
+
+.btn {
+    display: flex;
+    text-align: center;
+}
+
+.articleContainer {
+  width: 50%;
+  margin: auto;
+}
+
+.headline {
+  font-style: italic;
+  font-weight: bold;
+}
+
+.link {
+  margin-bottom: 10px;
+}
